@@ -14,7 +14,7 @@
 
 <article class="column-info full-width-horizontal-bar-shadow">
     <header class="column-meta clearfix main">
-        <img src="{{ .Params.title_image_url }}">
+        <img src="{{ .Site.BaseURL }}/{{ .Section }}/{{ .Params.title_image_url }}">
         <h1>{{ .Title }}</h1>
         <p class="description">{{ .Description }}</p>
         <address class="meta">{{ .Params.author }}</address>
@@ -36,7 +36,7 @@
                 <article>
                     <a href="{{ .RelPermalink }}"><h1>{{.Title}}</h1></a>
                     <div class="meta">
-                        <img src="{{ .Params.id }}/{{ .Params.author_detail.image_url }}">
+                        <img src="{{ .Site.BaseURL }}/{{ .Section }}/{{ .Params.id }}/{{ .Params.author_detail.image_url }}">
                         <a href="{{ .Params.author_detail.url }}"><address>{{ .Params.author }}</address></a>
                         {{ .Date.Format "2006-01-02" }}
                     </div>

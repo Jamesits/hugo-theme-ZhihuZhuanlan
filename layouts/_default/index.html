@@ -22,7 +22,7 @@
             {{ range .Sections }}
             <li><address class="column">
                     <img src="{{ .Params.url_token }}/{{ .Params.title_image_url }}">
-                    <a href="{{ .Params.url }}">
+                    <a href="{{ .RelPermalink }}">
                         <h3>{{ .Title }}</h3>
                     </a>
                     <p>{{ .Params.description }}</p>

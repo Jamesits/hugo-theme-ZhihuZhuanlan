@@ -1,10 +1,10 @@
-a {
+article a, article a:link {
   cursor: pointer;
   text-decoration: underline;
   text-decoration-color: gray;
 }
 
-a:hover {
+article a:hover {
   color: #175199;
   text-decoration: underline;
 }

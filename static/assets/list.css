@@ -8,7 +8,9 @@ body {
     flex-direction: column;
 }
 
-
+article a:link, article a:hover, article a:visited {
+    text-decoration: None;
+}
 
 .column-info {
     padding: 2px 0 16px 0;
