@@ -1,0 +1,106 @@
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+* {
+  box-sizing: border-box;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+body,
+html:lang(zh-Hans),
+html:lang(zh-CN) {
+  font-family: 'Biaodian Pro Sans GB',
+                -apple-system,
+                BlinkMacSystemFont,
+                'Helvetica Neue',
+                'PingFang SC',
+                'Microsoft YaHei',
+                'Source Han Sans SC',
+                'Noto Sans CJK SC',
+                'WenQuanYi Micro Hei',
+                sans-serif;
+}
+
+.full-width-horizontal-bar-shadow {
+  box-shadow: 0 1px 3px rgba(26,26,26,.1);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  height: 52px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.nav>* {
+  display: flex;
+  align-items: center;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.site-icon {
+  margin: auto;
+  letter-spacing: 0.2em;
+  padding-right: 12px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: gray;
+}
+
+a:hover {
+  color: #175199;
+  text-decoration: underline;
+}
+
+
+.main {
+  width: 690px;
+  margin: auto;
+}
+
+
+.meta {
+  font-size: 14px;
+  color: #8590a6;
+  margin-bottom: 8px 0;
+}
+
+.button {
+  display: inline-block;
+  cursor: pointer;
+  background-color: #0077e6;
+  border-radius: 3px;
+  border-color: rgb(0, 119, 230);
+  border-width: 1px;
+  border-style: solid;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 32px;
+  margin-right: 16px;
+  padding: 0 16px;
+  text-align: center; 
+  text-decoration: none;
+  height: 34px;
+  min-width: 96px;
+}
+
+.button:hover {
+  border-color: #0077e6;
+  background-color: #0077e6;
+  color: #fff;
+  text-decoration: none;
+}

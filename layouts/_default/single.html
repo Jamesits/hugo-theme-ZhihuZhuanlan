@@ -1,0 +1,80 @@
+{{ partial "header" . }}
+{{ partial "nav" . }}
+<link rel="stylesheet" href="/assets/single.css">
+<!-- Top bar -->
+<header class="full-width-horizontal-bar-shadow">
+    <div class="nav">
+        <div class="left">
+            <h1 class="site-icon">
+                <a href="{{ .Site.BaseURL }}">逼乎</a>
+            </h1>
+            <img src="{{ .Params.current_column.image_url }}" />
+            <div class="column-title">
+                <p>发布于</p>
+                <a href="{{ .Params.current_column.url }}/">
+                    <h1>{{ .Params.current_column.title }}</h1>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Article -->
+<article class="main">
+    <!-- Top metadata -->
+    <section>
+        <!-- Title image -->
+        <img class="title-img" src="{{ .Params.title_image_url }}">
+        <!-- Title -->
+        <h1>{{ .Title }}{{ if .Draft }} ::Draft{{ end }}</h1>
+        <!-- Author contact card -->
+        {{ if (ne ($.Param "displayauthor") false) }}
+        <address class="people">
+            <img src="{{ .Params.author_detail.image_url }}">
+            <h1>{{ .Params.author }}</h1>
+            <p>{{ .Params.author_detail.description }}</p>
+        </address>
+        {{ end }}
+        <!-- Upvotes -->
+        <p class="meta">{{ .Params.upvotes }}人赞了该文章</p>
+    </section>
+    <!-- Content -->
+    <section class="content">
+        {{ .Content }}
+    </section>
+    <!-- Bottom metadata -->
+    <section>
+        <p class="meta">
+            发布于{{ .Date.Format "2006-01-02 15:04" }} <br>
+            {{ if .Params.lastmod }}
+            编辑于{{ .Lastmod.Format "2006-01-02 15:04" }}
+            {{ end }}
+        </p>
+        {{ if .Params.tags }}
+        <ul class="tags">
+            {{ range .Params.tags }}
+            <li>{{ . }}</li>
+            {{ end }}
+        </ul>
+        {{ end }}
+    </section>
+    <!-- Referral -->
+    <section class="column-list">
+        {{ if .Params.all_columns }}
+        <h1>文章被以下专栏收录</h1>
+        <ul>
+            {{ range .Params.all_columns }}
+            <li><address class="column">
+                    <img src="{{ .image_url }}">
+                    <a href="{{ .url }}">
+                        <h3>{{ .title }}</h3>
+                    </a>
+                    <p>{{ .description }}</p>
+                </address></li>
+            {{ end }}
+        </ul>
+        {{ end }}
+    </section>
+</article>
+
+{{ partial "footer" . }}

@@ -1,0 +1,167 @@
+.site-icon {
+  border-right: 1px solid #ebebeb;
+}
+
+.nav img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: auto 12px auto 16px;
+}
+
+.nav .column-title {
+  height: 34px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  position: relative;
+  top: 2px;
+}
+
+.nav .column-title p {
+  color: #8590a6;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.nav .column-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav .column-title h1 {
+  font-weight: 600;
+  font-synthesis: style;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+
+article h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 17px 0;
+}
+
+article h2 {
+  margin-bottom: .83em;
+  font-size: 1.2em;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+article .content img {
+  display: block;
+  margin: 1em auto;
+  width: auto;
+  max-width: 100%;
+}
+
+article .content p {
+  margin: 1em 0;
+}
+
+article .content ul, article .content ol {
+  line-height: 1.5;
+}
+
+.title-img {
+  display: block;
+  margin: 16px auto 0;
+  width: 100%;
+  max-height: 287.5px;
+  object-fit: cover;
+}
+
+.people {
+  margin: 17px 0;
+}
+
+.people img {
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  float: left;
+  margin-right: 12px;
+}
+
+.people h1 {
+  font-weight: 600;
+  color: #444;
+  font-size: 15px;
+  line-height: 1.1;
+  margin-bottom: 0;
+}
+
+.people p {
+  color: #646464;
+  font-size: 14px;
+  margin-top: 2px;
+  line-height: 1.6;
+  text-overflow: ellipsis;
+}
+
+.tags {
+  display: block;
+  padding-left: initial;
+}
+
+.tags li {
+  display: inline-block;
+  background-color: rgba(0, 132, 255, .1);
+  color: #0084ff;
+  border-radius: 100px;
+  padding: 0 12px;
+  font-size: 13px;
+  line-height: 33px;
+}
+
+.column-list h1 {
+  font-weight: 600;
+  line-height: 1.375;
+  font-size: 16px;
+  color: #1a1a1a;
+  border-color: #ebebeb;
+  border-bottom-style: solid;
+  border-width: 1px;
+  padding-bottom: 12px;
+  margin-top: 32px;
+}
+
+.column-list ul {
+  display: block;
+  list-style: none;
+  padding-left: initial;
+}
+
+.column {
+  height: 24px;
+  margin: 40px 0;
+}
+
+.column img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  float: left;
+  margin-right: 16px;
+}
+
+.column a {
+  text-decoration: none;
+}
+
+.column h3 {
+  font-size: 15px;
+  line-height: initial;
+  color: #175199;
+}
+
+.column p {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.meta {
+  margin: 32px 0;
+}

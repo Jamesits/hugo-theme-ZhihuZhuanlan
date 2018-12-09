@@ -1,0 +1,49 @@
+{{ partial "header" . }}
+{{ partial "nav" . }}
+<link rel="stylesheet" href="/assets/list.css">
+<!-- Top bar -->
+<header class="full-width-horizontal-bar-shadow">
+    <div class="nav">
+        <div class="left">
+            <h1 class="site-icon">
+                <a href="{{ .Site.BaseURL }}">逼乎</a>
+            </h1>
+        </div>
+    </div>
+</header>
+
+<article class="column-info full-width-horizontal-bar-shadow">
+    <header class="column-meta clearfix main">
+        <img src="{{ .Params.title_image_url }}">
+        <h1>{{ .Title }}</h1>
+        <p class="description">{{ .Description }}</p>
+        <address class="meta">{{ .Params.author }}</address>
+        <p class="meta">
+            {{ .Params.follower_count }}人关注
+        </p>
+        <a class="button" href="{{ .RSSLink }}">关注专栏</a>
+    </header>
+    <!-- "{{.Content}}" pulls from the markdown content of the corresponding _index.md -->
+    {{.Content}}
+</article>
+<div class="float-container">
+    <main class="main">
+        <h1>文章</h1>
+        <ul>
+            <!-- Ranges through content/post/*.md -->
+            {{ range .Paginator.Pages }}
+            <li>
+                <a href="{{.Permalink}}">{{.Title}}</a>
+                {{ .Params.author }}
+                {{ .Date.Format "2006-01-02" }}
+            </li>
+            {{ end }}
+        </ul>
+    
+        {{ template "_internal/pagination.html" . }}
+    </main>
+</div>
+
+
+
+{{ partial "footer" . }}

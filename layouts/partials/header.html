@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+    {{ partial "meta.html" . }}
+    {{ partial "favicons.html" . }}
+    <title>{{ .Title }}</title>
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/prism/prism.css"/>
+    <link rel="stylesheet" href="/assets/han/han.min.css"/>
+    <link rel="stylesheet" href="/assets/common.css">
+    <!-- JS -->
+    <script src="/assets/han/han.min.js" defer></script>
+    <script src="/assets/prism/prism.js" defer></script>
+</head>
+<body>

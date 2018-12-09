@@ -1,0 +1,12 @@
+languageCode = "zh-CN"
+title = "逼乎专栏镜像站"
+theme = "zhihuzhuanlan"
+enableEmoji = true
+relativeURLs = true
+
+[blackfriday]
+  smartypants = false
+  extensions = ["hardLineBreak"]
+  fractions = false
+  plainIDAnchors = true
+  

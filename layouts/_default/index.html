@@ -1,0 +1,29 @@
+{{ partial "header" . }}
+{{ partial "nav" . }}
+<link rel="stylesheet" href="/assets/list.css">
+<!-- Top bar -->
+<header class="nav-container">
+    <div class="nav">
+        <div class="left">
+            <h1 class="site-icon">
+                <a href="{{ .Site.BaseURL }}">{{.Title}}</a>
+            </h1>
+        </div>
+    </div>
+</header>
+
+<main class="main">
+    <article>
+        {{.Content}}
+    </article>
+    Hosted here: 
+    <ul>
+    {{ range .Sections }}
+        <li>
+            <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+        </li>
+    {{ end }}
+    </ul>
+</main>
+
+{{ partial "footer" . }}
