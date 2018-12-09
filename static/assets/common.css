@@ -145,4 +145,7 @@ article a:link, article a:visited, article a:hover {
 .column-list .column p {
   font-size: 14px;
   line-height: 21px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
