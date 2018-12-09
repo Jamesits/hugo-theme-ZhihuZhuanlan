@@ -29,21 +29,31 @@
 <div class="float-container">
     <main class="main">
         <h1>文章</h1>
-        <ul>
+        <ul class="article-list">
             <!-- Ranges through content/post/*.md -->
             {{ range .Paginator.Pages }}
             <li>
-                <a href="{{.Permalink}}">{{.Title}}</a>
-                {{ .Params.author }}
-                {{ .Date.Format "2006-01-02" }}
+                <article>
+                    <a href="{{ .RelPermalink }}"><h1>{{.Title}}</h1></a>
+                    <div class="meta">
+                        <img src="{{ .Params.id }}/{{ .Params.author_detail.image_url }}">
+                        <a href="{{ .Params.author_detail.url }}"><address>{{ .Params.author }}</address></a>
+                        {{ .Date.Format "2006-01-02" }}
+                    </div>
+                    <p>
+                        {{ .Summary }}
+                        {{ if .Truncated }}
+                        …
+                        {{ end }}
+                        <a class="read-more" href="{{ .RelPermalink }}">阅读全文></a>
+                    </p>
+                </article>
             </li>
             {{ end }}
         </ul>
-    
+        
         {{ template "_internal/pagination.html" . }}
     </main>
 </div>
-
-
 
 {{ partial "footer" . }}

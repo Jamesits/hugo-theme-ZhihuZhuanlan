@@ -1,3 +1,14 @@
+a {
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: gray;
+}
+
+a:hover {
+  color: #175199;
+  text-decoration: underline;
+}
+
 .site-icon {
   border-right: 1px solid #ebebeb;
 }
@@ -114,52 +125,6 @@ article .content ul, article .content ol {
   padding: 0 12px;
   font-size: 13px;
   line-height: 33px;
-}
-
-.column-list h1 {
-  font-weight: 600;
-  line-height: 1.375;
-  font-size: 16px;
-  color: #1a1a1a;
-  border-color: #ebebeb;
-  border-bottom-style: solid;
-  border-width: 1px;
-  padding-bottom: 12px;
-  margin-top: 32px;
-}
-
-.column-list ul {
-  display: block;
-  list-style: none;
-  padding-left: initial;
-}
-
-.column {
-  height: 24px;
-  margin: 40px 0;
-}
-
-.column img {
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  float: left;
-  margin-right: 16px;
-}
-
-.column a {
-  text-decoration: none;
-}
-
-.column h3 {
-  font-size: 15px;
-  line-height: initial;
-  color: #175199;
-}
-
-.column p {
-  font-size: 14px;
-  line-height: 21px;
 }
 
 .meta {

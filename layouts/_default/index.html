@@ -2,28 +2,34 @@
 {{ partial "nav" . }}
 <link rel="stylesheet" href="/assets/list.css">
 <!-- Top bar -->
-<header class="nav-container">
+<header class="full-width-horizontal-bar-shadow">
     <div class="nav">
         <div class="left">
             <h1 class="site-icon">
-                <a href="{{ .Site.BaseURL }}">{{.Title}}</a>
+                <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
             </h1>
         </div>
     </div>
 </header>
 
 <main class="main">
-    <article>
+    <article class="main">
         {{.Content}}
     </article>
-    Hosted here: 
-    <ul>
-    {{ range .Sections }}
-        <li>
-            <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
-        </li>
-    {{ end }}
-    </ul>
+    <p>镜像站：</p>
+    <section class="column-list">
+        <ul>
+            {{ range .Sections }}
+            <li><address class="column">
+                    <img src="{{ .Params.url_token }}/{{ .Params.title_image_url }}">
+                    <a href="{{ .Params.url }}">
+                        <h3>{{ .Title }}</h3>
+                    </a>
+                    <p>{{ .Params.description }}</p>
+                </address></li>
+            {{ end }}
+        </ul>
+    </section>
 </main>
 
 {{ partial "footer" . }}
