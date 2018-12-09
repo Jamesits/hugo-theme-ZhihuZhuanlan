@@ -74,7 +74,7 @@ article a:link, article a:visited, article a:hover {
   margin-bottom: 8px 0;
 }
 
-.button, .button:link {
+.button, .button:link, .button:hover, .button:visited {
   display: inline-block;
   cursor: pointer;
   background-color: #0077e6;
