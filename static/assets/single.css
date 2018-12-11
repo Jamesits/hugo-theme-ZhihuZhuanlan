@@ -21,7 +21,6 @@ article a:hover {
 }
 
 .nav .column-title {
-  height: 34px;
   display: flex;
   flex-direction: column;
   align-content: space-between;
